@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Game1</string>
+    <string name="wins_format">Wins: %d</string>
+    <string name="ai_thinking">AI is thinking&#8230;</string>
+    <string name="your_turn">Your Turn (X)</string>
+    <string name="easy_desc">AI makes completely random moves. Relax and play!</string>
+    <string name="medium_desc">AI blocks your wins and takes its own. A fair challenge!</string>
+    <string name="hard_desc">Unbeatable AI (Minimax). Can you at least get a draw?</string>
+</resources>

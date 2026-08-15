@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050505">
+
+    <!-- 1. The Falling Shapes Animation Background -->
+    <com.example.game1.FallingShapesView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 2. The Main UI Overlay -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <!-- Stacked Cinematic Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.4"
+            android:text="N E O N"
+            android:textColor="#888888"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:shadowColor="#00FFFF"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="20"
+            android:text="TIC TAC TOE"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle Prompt -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:letterSpacing="0.2"
+            android:text="- SELECT MODE -"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Option 1: Play vs Computer (Pink Theme) -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnComputer"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_btn_computer"
+            android:drawableStart="@android:drawable/ic_menu_agenda"
+            android:drawableTint="#FF00FF"
+            android:elevation="10dp"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:text="Vs Computer"
+            android:textAllCaps="false"
+            android:textColor="#FF00FF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Option 2: Global Multiplayer (Cyan Theme) -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnOnline"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_btn_global"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawableTint="#00FFFF"
+            android:elevation="10dp"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:text="Global Match"
+            android:textAllCaps="false"
+            android:textColor="#00FFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Option 3: Local Multiplayer (Green Theme) -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLocal"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:background="@drawable/bg_btn_local"
+            android:drawableStart="@android:drawable/ic_menu_myplaces"
+            android:drawableTint="#39FF14"
+            android:elevation="10dp"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:text="Play with Friend"
+            android:textAllCaps="false"
+            android:textColor="#39FF14"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <!-- The AdMob Banner -->
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
